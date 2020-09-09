@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="242" viewBox="0 0 1000 242">
+  <g id="announcement-style-1" transform="translate(-360 -645)">
+    <rect id="Rectangle" width="1000" height="242" rx="3" transform="translate(360 645)" fill="#f0f0f0"/>
+    <rect id="Rectangle-2" data-name="Rectangle" width="872" height="80" transform="translate(424 709)" fill="#fff"/>
+    <g id="Call_to_action" data-name="Call to action" transform="translate(7 486)">
+      <path id="Arrow" d="M7,0,5.5,1.5,10,6H0V8H10L5.5,12.5,7,14l7-7Z" transform="translate(1176 257)" fill="#8a8d90"/>
+      <text id="Call_to_action-2" data-name="Call to action" transform="translate(1057 270)" fill="#8a8d90" font-size="18" font-family="RedHatDisplay-Bold, Red Hat Display" font-weight="700"><tspan x="0" y="0">Call to action</tspan></text>
+    </g>
+    <text id="Get_your_free_pass_to_our_immersive_virtual_event" data-name="Get your free pass to our immersive virtual event" transform="translate(686 755)" fill="#8a8d90" font-size="16" font-family="RedHatText-Regular, Red Hat Text"><tspan x="0" y="0">Get your free pass to our immersive virtual event</tspan></text>
+    <g id="Logo" transform="translate(45 487)">
+      <rect id="Rectangle-3" data-name="Rectangle" width="130" height="40" rx="3" transform="translate(479 242)" fill="#f5f5f5"/>
+      <text id="Logo-2" data-name="Logo" transform="translate(528 267)" fill="#8a8d90" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="0">Logo</tspan></text>
+    </g>
+    <text id="Call_to_action-3" data-name="Call to action" transform="translate(1089 819)" fill="#06c" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="0">Call to action</tspan></text>
+    <rect id="Rectangle-4" data-name="Rectangle" width="1" height="55" transform="translate(1130 750)" fill="#06c"/>
+    <circle id="Ellipse" cx="3.5" cy="3.5" r="3.5" transform="translate(1127 746)" fill="#06c"/>
+    <text id="Text_area" data-name="Text area" transform="translate(830 819)" fill="#06c" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="0">Text area</tspan></text>
+    <rect id="Rectangle-5" data-name="Rectangle" width="1" height="55" transform="translate(859 750)" fill="#06c"/>
+    <circle id="Ellipse-2" data-name="Ellipse" cx="3.5" cy="3.5" r="3.5" transform="translate(856 746)" fill="#06c"/>
+    <text id="Logo_area" data-name="Logo area" transform="translate(557 819)" fill="#06c" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="0">Logo area</tspan></text>
+    <rect id="Rectangle-6" data-name="Rectangle" width="1" height="55" transform="translate(589 750)" fill="#06c"/>
+    <circle id="Ellipse-3" data-name="Ellipse" cx="3.5" cy="3.5" r="3.5" transform="translate(586 746)" fill="#06c"/>
+  </g>
+</svg>

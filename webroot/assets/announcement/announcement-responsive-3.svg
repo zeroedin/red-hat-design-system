@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="640" viewBox="0 0 360 640">
+  <g id="announcement-responsive-3" transform="translate(-360 -4109)">
+    <g id="Announcement_banner" data-name="Announcement banner" transform="translate(0 3887)">
+      <g id="Rectangle" transform="translate(360 222)" fill="#fff" stroke="#d2d2d2" stroke-width="1">
+        <rect width="360" height="87" stroke="none"/>
+        <rect x="0.5" y="0.5" width="359" height="86" fill="none"/>
+      </g>
+      <text id="Get_your_free_pass_to_our_immersive_virtual_event" data-name="Get your free pass to our immersive virtual event" transform="translate(544 246)" fill="#06c" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="14">Get your free pass to our </tspan><tspan x="0" y="35">immersive virtual event</tspan></text>
+      <g id="Logo" transform="translate(-94 4)">
+        <rect id="Rectangle-2" data-name="Rectangle" width="130" height="39" rx="3" transform="translate(479 242)" fill="#f5f5f5"/>
+        <text id="Logo-2" data-name="Logo" transform="translate(528 267)" fill="#6a6e73" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="0">Logo</tspan></text>
+      </g>
+    </g>
+    <g id="Grid" transform="translate(0 144)" opacity="0.03">
+      <rect id="Rectangle-3" data-name="Rectangle" width="16" height="640" transform="translate(704 3965)" fill="blue" opacity="0.75"/>
+      <rect id="Rectangle-4" data-name="Rectangle" width="328" height="640" transform="translate(376 3965)" fill="red" opacity="0.75"/>
+      <rect id="Rectangle-5" data-name="Rectangle" width="16" height="640" transform="translate(360 3965)" fill="blue" opacity="0.75"/>
+    </g>
+  </g>
+</svg>

@@ -12,7 +12,7 @@ tags:
 
 {% call components.section("Sample component") -%}
 <div class= "margin-top--4 margin-bottom--8">
-  <img src="{{ '/assets/announcement/announcement-sample-1@2x.png' | url }}" alt="Example of an announcement banner">
+  <img src="{{ '/assets/announcement/announcement-sample-1.svg' | url }}" alt="Example of an announcement banner">
 </div>
 {%- endcall %}
 
@@ -23,27 +23,21 @@ tags:
 {% call components.section("Style") -%}
   <p>An announcement banner can be used in light, dark, and saturated themes. It can feature elements like text, a button, a call to action, icons, imagery, or a background container.</p>
 
-  {% call components.example(palette='light') %}
     <div class="centered margin-top--4 margin-bottom--4">
-      <img src="{{ '/assets/announcement/announcement-style-1@2x.png' | url }}" alt="Anatomy of an announcement banner" style="--inline-img-max-width: 872px;">
+      <img src="{{ '/assets/announcement/announcement-style-1.svg' | url }}" alt="Anatomy of an announcement banner">
     </div>
-  {%- endcall %}
 {%- endcall %}
 
 <hr class="margin-top--10 margin-bottom--10">
 
 {% call components.section("Theme") -%}
-  {% call components.example(palette='light') %}
     <div class="margin-top--4 margin-bottom--4">
-      <img src="{{ '/assets/announcement/announcement-theme-1@2x.png' | url }}" alt="Announcement banner on light theme" style="--inline-img-max-width: 872px;">
+      <img src="{{ '/assets/announcement/announcement-theme-1.svg' | url }}" alt="Announcement banner on light theme">
     </div>
-  {%- endcall %}
 
-  {% call components.example(palette='light') %}
     <div class="margin-top--4 margin-bottom--4">
-      <img src="{{ '/assets/announcement/announcement-theme-2@2x.png' | url }}" alt="Announcement banner on dark theme" style="--inline-img-max-width: 872px;">
+      <img src="{{ '/assets/announcement/announcement-theme-2.svg' | url }}" alt="Announcement banner on dark theme">
     </div>
-  {%- endcall %}
 {%- endcall %}
 
 <hr class="margin-top--10 margin-bottom--10">
@@ -55,19 +49,19 @@ tags:
   <p>An announcement banner doesn’t fall within the grid. It spans the entire width of a browser window on all screens whereas the content of the banner itself should fall within the standard grid.<p>
 
   <div class="margin-top--4 margin-bottom--4">
-    <img src="{{ '/assets/announcement/announcement-usage-1@2x.png' | url }}" alt="Announcement banner spanning entire width of browser window">
+    <img src="{{ '/assets/announcement/announcement-usage-1.svg' | url }}" alt="Announcement banner spanning entire width of browser window">
   </div>
 
   <h3>Layout</h3>
   <p>An announcement banner should be positioned above the navigation so it becomes the highest layout in hierarchy. It can also be used across different pages to better attract attention from visitors who might be coming from different places.<p>
     <div class="margin-top--4 margin-bottom--4">
-      <img src="{{ '/assets/announcement/announcement-usage-2@2x.png' | url }}" alt="Announcement banner positioned above the main menu on Redhat.com">
+      <img src="{{ '/assets/announcement/announcement-usage-2.svg' | url }}" alt="Announcement banner positioned above the main menu on Redhat.com">
     </div>
 
   <h3>Content</h3>
   <p>Any content within an announcement banner can either be center-aligned or aligned to the left and right sides, depending on the amount of content and what its objective is.</p>
   <div class="margin-top--4 margin-bottom--4">
-    <img src="{{ '/assets/announcement/announcement-usage-3@2x.png' | url }}" alt="One announcement banner showing center-aligned content and one showing left and right-aligned content">
+    <img src="{{ '/assets/announcement/announcement-usage-3.svg' | url }}" alt="One announcement banner showing center-aligned content and one showing left and right-aligned content">
   </div>
 {%- endcall %}
 
@@ -78,7 +72,7 @@ tags:
 
   {% call components.example(palette='wrong') %}
     <div class="margin-top--4 margin-bottom--4">
-      <img src="{{ '/assets/announcement/announcement-bestpractice-1@2x.png' | url }}" alt="Example of an announcement banner below the primary navigation" style="--inline-img-max-width: 872px;">
+      <img src="{{ '/assets/announcement/announcement-bestpractice-1.svg' | url }}" alt="Example of an announcement banner below the primary navigation" style="--inline-img-max-width: 872px;">
     </div>
   {%- endcall %}
 {%- endcall %}
@@ -98,17 +92,17 @@ tags:
 
   <h3>Desktop</h3>
   <div class="margin-top--4 margin-bottom--4">
-    <img src="{{ '/assets/announcement/announcement-responsive-1@2x.png' | url }}" alt="Example of an announcement banner on desktop">
+    <img src="{{ '/assets/announcement/announcement-responsive-1.svg' | url }}" alt="Example of an announcement banner on desktop">
   </div>
 
   <h3>Tablet</h3>
   <div class="margin-top--4 margin-bottom--4">
-    <img src="{{ '/assets/announcement/announcement-responsive-2@2x.png' | url }}" alt="Example of an announcement banner on tablet" style="--inline-img-max-width: 768px;">
+    <img src="{{ '/assets/announcement/announcement-responsive-2.svg' | url }}" alt="Example of an announcement banner on tablet" style="--inline-img-max-width: 768px;">
   </div>
 
   <h3>Mobile</h3>
   <div class="margin-top--4 margin-bottom--4">
-    <img src="{{ '/assets/announcement/announcement-responsive-3@2x.png' | url }}" alt="Example of an announcement banner on mobile" style="--inline-img-max-width: 360px;">
+    <img src="{{ '/assets/announcement/announcement-responsive-3.svg' | url }}" alt="Example of an announcement banner on mobile" style="--inline-img-max-width: 360px;">
   </div>
 
   <p class="footnote">Some text styles reduce in size on small screens. Learn more about <a href="../../foundations/typography">typography</a> on mobile.</p>
@@ -129,7 +123,7 @@ tags:
 
 
   <div class="margin-top--4 margin-bottom--4">
-    <img src="{{ '/assets/announcement/announcement-spacing-1@2x.png' | url }}" alt="Example of an announcement banner with spacers">
+    <img src="{{ '/assets/announcement/announcement-spacing-1.svg' | url }}" alt="Example of an announcement banner with spacers">
   </div>
 
 {%- endcall %}
@@ -139,8 +133,8 @@ tags:
 <div class="multi-column--min-300-wide">
   {% call components.section("Related components") -%}
   <ul>
-    <!-- future state <li><a href="../cookie-banner">Cookie banner</a></li> -->
-    <!-- future state <li><a href="#">Logo banner</a></li> -->
+    <li><a href="../cookie-banner">Cookie banner</a></li>
+    <!-- <li><a href="#">Logo banner</a></li> -->
     <li><a href="../sticky-banner">Sticky banner</a></li>
     <li><a href="../promo-banner">Promo banner</a></li>
   </ul>

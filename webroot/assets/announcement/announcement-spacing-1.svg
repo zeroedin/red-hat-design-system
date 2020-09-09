@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="522" viewBox="0 0 1000 522">
+  <g id="announcement-spacing-1" transform="translate(-360 -1727)">
+    <rect id="Rectangle" width="1000" height="522" rx="3" transform="translate(360 1727)" fill="#f0f0f0"/>
+    <g id="Announcement_banner" data-name="Announcement banner" transform="translate(64 1849)">
+      <rect id="Rectangle-2" data-name="Rectangle" width="872" height="80" transform="translate(360 222)" fill="#fff"/>
+      <g id="Call_to_action" data-name="Call to action" transform="translate(22 -1)">
+        <path id="Arrow" d="M7,0,5.5,1.5,10,6H0V8H10L5.5,12.5,7,14l7-7Z" transform="translate(1176 257)" fill="#06c"/>
+        <text id="Call_to_action-2" data-name="Call to action" transform="translate(1057 270)" fill="#06c" font-size="18" font-family="RedHatDisplay-Bold, Red Hat Display" font-weight="700"><tspan x="0" y="0">Call to action</tspan></text>
+      </g>
+      <text id="Get_your_free_pass_to_our_immersive_virtual_event" data-name="Get your free pass to our immersive virtual event" transform="translate(542 268)" fill="#151515" font-size="16" font-family="RedHatText-Regular, Red Hat Text"><tspan x="0" y="0">Get your free pass to our immersive virtual event</tspan></text>
+      <g id="Logo" transform="translate(-99)">
+        <rect id="Rectangle-3" data-name="Rectangle" width="130" height="40" rx="3" transform="translate(479 242)" fill="#f5f5f5"/>
+        <text id="Logo-2" data-name="Logo" transform="translate(528 267)" fill="#6a6e73" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="0">Logo</tspan></text>
+      </g>
+      <g id="_16px" data-name="16px" transform="translate(1216 251)">
+        <rect id="_16px-2" data-name="16px" width="16" height="23" fill="#51a549"/>
+      </g>
+      <rect id="_4px" data-name="4px" width="4" height="23" transform="translate(1212 251)" fill="#ec861b"/>
+      <g id="Rectangle-4" data-name="Rectangle" transform="translate(1079 251)" fill="none" stroke="#f0f" stroke-width="1" opacity="0.25">
+        <rect width="133" height="23" stroke="none"/>
+        <rect x="0.5" y="0.5" width="132" height="22" fill="none"/>
+      </g>
+      <g id="Rectangle-5" data-name="Rectangle" transform="translate(542 252)" fill="none" stroke="#f0f" stroke-width="1" opacity="0.25">
+        <rect width="346" height="21" stroke="none"/>
+        <rect x="0.5" y="0.5" width="345" height="20" fill="none"/>
+      </g>
+      <g id="_32px" data-name="32px" transform="translate(510 252)">
+        <rect id="_32px-2" data-name="32px" width="32" height="21" fill="#1893d2"/>
+      </g>
+      <g id="_16px-3" data-name="16px" transform="translate(437 286)">
+        <rect id="_16px-4" data-name="16px" width="16" height="16" fill="#51a549"/>
+      </g>
+      <rect id="_4px-2" data-name="4px" width="16" height="4" transform="translate(437 282)" fill="#ec861b"/>
+      <rect id="_4px-3" data-name="4px" width="4" height="16" transform="translate(376 254)" fill="#ec861b"/>
+      <g id="_16px-5" data-name="16px" transform="translate(360 254)">
+        <rect id="_16px-6" data-name="16px" width="16" height="16" fill="#51a549"/>
+      </g>
+      <rect id="_4px-4" data-name="4px" width="16" height="4" transform="translate(437 238)" fill="#ec861b"/>
+      <g id="_16px-7" data-name="16px" transform="translate(437 222)">
+        <rect id="_16px-8" data-name="16px" width="16" height="16" fill="#51a549"/>
+      </g>
+    </g>
+    <g id="Announcement_banner-2" data-name="Announcement banner" transform="translate(64 1713)">
+      <rect id="Rectangle-6" data-name="Rectangle" width="872" height="72" transform="translate(360 222)" fill="#fff"/>
+      <g id="Call_to_action-3" data-name="Call to action" transform="translate(-57 -5)">
+        <path id="Arrow-2" data-name="Arrow" d="M7,0,5.5,1.5,10,6H0V8H10L5.5,12.5,7,14l7-7Z" transform="translate(1176 257)" fill="#06c"/>
+        <text id="Call_to_action-4" data-name="Call to action" transform="translate(1057 270)" fill="#06c" font-size="18" font-family="RedHatDisplay-Bold, Red Hat Display" font-weight="700"><tspan x="0" y="0">Call to action</tspan></text>
+      </g>
+      <text id="Get_your_free_pass_to_our_immersive_virtual_event-2" data-name="Get your free pass to our immersive virtual event" transform="translate(622 264)" fill="#151515" font-size="16" font-family="RedHatText-Regular, Red Hat Text"><tspan x="0" y="0">Get your free pass to our immersive virtual event</tspan></text>
+      <g id="Logo-3" data-name="Logo" transform="translate(-19 -4)">
+        <rect id="Logo-4" data-name="Logo" width="130" height="40" rx="3" transform="translate(479 242)" fill="#f5f5f5"/>
+        <text id="Logo-5" data-name="Logo" transform="translate(528 267)" fill="#6a6e73" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="0">Logo</tspan></text>
+      </g>
+      <g id="Spacing">
+        <g id="Rectangle-7" data-name="Rectangle" transform="translate(1000 247)" fill="none" stroke="#f0f" stroke-width="1" opacity="0.25">
+          <rect width="133" height="23" stroke="none"/>
+          <rect x="0.5" y="0.5" width="132" height="22" fill="none"/>
+        </g>
+        <g id="_32px-3" data-name="32px" transform="translate(968 247)">
+          <rect id="_32px-4" data-name="32px" width="32" height="23" fill="#1893d2"/>
+        </g>
+        <g id="Rectangle-8" data-name="Rectangle" transform="translate(622 248)" fill="none" stroke="#f0f" stroke-width="1" opacity="0.25">
+          <rect width="346" height="21" stroke="none"/>
+          <rect x="0.5" y="0.5" width="345" height="20" fill="none"/>
+        </g>
+        <g id="_32px-5" data-name="32px" transform="translate(590 248)">
+          <rect id="_32px-6" data-name="32px" width="32" height="21" fill="#1893d2"/>
+        </g>
+        <g id="_16px-9" data-name="16px" transform="translate(517 278)">
+          <rect id="_16px-10" data-name="16px" width="16" height="16" fill="#51a549"/>
+        </g>
+        <g id="_16px-11" data-name="16px" transform="translate(517 222)">
+          <rect id="_16px-12" data-name="16px" width="16" height="16" fill="#51a549"/>
+        </g>
+      </g>
+    </g>
+    <g id="Announcement_banner-3" data-name="Announcement banner" transform="translate(64 1569)">
+      <rect id="Rectangle-9" data-name="Rectangle" width="872" height="80" transform="translate(360 222)" fill="#fff"/>
+      <g id="Call_to_action-5" data-name="Call to action" transform="translate(-57 -1)">
+        <path id="Arrow-3" data-name="Arrow" d="M7,0,5.5,1.5,10,6H0V8H10L5.5,12.5,7,14l7-7Z" transform="translate(1176 257)" fill="#06c"/>
+        <text id="Call_to_action-6" data-name="Call to action" transform="translate(1057 270)" fill="#06c" font-size="18" font-family="RedHatDisplay-Bold, Red Hat Display" font-weight="700"><tspan x="0" y="0">Call to action</tspan></text>
+      </g>
+      <text id="Get_your_free_pass_to_our_immersive_virtual_event-3" data-name="Get your free pass to our immersive virtual event" transform="translate(622 268)" fill="#151515" font-size="16" font-family="RedHatText-Regular, Red Hat Text"><tspan x="0" y="0">Get your free pass to our immersive virtual event</tspan></text>
+      <g id="Logo-6" data-name="Logo" transform="translate(-19)">
+        <rect id="Rectangle-10" data-name="Rectangle" width="130" height="40" rx="3" transform="translate(479 242)" fill="#f5f5f5"/>
+        <text id="Logo-7" data-name="Logo" transform="translate(528 267)" fill="#6a6e73" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="0">Logo</tspan></text>
+      </g>
+      <g id="Spacing-2" data-name="Spacing">
+        <g id="Rectangle-11" data-name="Rectangle" transform="translate(1000 251)" fill="none" stroke="#f0f" stroke-width="1" opacity="0.25">
+          <rect width="133" height="23" stroke="none"/>
+          <rect x="0.5" y="0.5" width="132" height="22" fill="none"/>
+        </g>
+        <g id="_32px-7" data-name="32px" transform="translate(968 251)">
+          <rect id="_32px-8" data-name="32px" width="32" height="23" fill="#1893d2"/>
+        </g>
+        <g id="Rectangle-12" data-name="Rectangle" transform="translate(622 252)" fill="none" stroke="#f0f" stroke-width="1" opacity="0.25">
+          <rect width="346" height="21" stroke="none"/>
+          <rect x="0.5" y="0.5" width="345" height="20" fill="none"/>
+        </g>
+        <g id="_32px-9" data-name="32px" transform="translate(590 252)">
+          <rect id="_32px-10" data-name="32px" width="32" height="21" fill="#1893d2"/>
+        </g>
+        <g id="_16px-13" data-name="16px" transform="translate(517 286)">
+          <rect id="_16px-14" data-name="16px" width="16" height="16" fill="#51a549"/>
+        </g>
+        <rect id="_4px-5" data-name="4px" width="16" height="4" transform="translate(517 282)" fill="#ec861b"/>
+        <rect id="_4px-6" data-name="4px" width="16" height="4" transform="translate(517 238)" fill="#ec861b"/>
+        <g id="_16px-15" data-name="16px" transform="translate(517 222)">
+          <rect id="_16px-16" data-name="16px" width="16" height="16" fill="#51a549"/>
+        </g>
+      </g>
+    </g>
+    <text id="_16px_minimum_spacing" data-name="16px minimum spacing" transform="translate(533 2181)" fill="#06c" font-size="14" font-family="RedHatText-Regular, Red Hat Text" letter-spacing="0.01em"><tspan x="0" y="0">16px minimum spacing</tspan></text>
+    <rect id="Rectangle-13" data-name="Rectangle" width="1" height="224" transform="translate(604 1943)" fill="#06c"/>
+    <circle id="Ellipse" cx="3.5" cy="3.5" r="3.5" transform="translate(601 1939)" fill="#06c"/>
+  </g>
+</svg>
