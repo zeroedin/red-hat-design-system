@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="/elements/rh-secondary-nav/demo/demo.css"/>
+<link rel="stylesheet" href="/elements/rh-secondary-nav/rh-secondary-nav--lightdom.min.css"/>
+
+<rh-secondary-nav>
+  <nav aria-label="Secondary" aria-labelledby="logo-id" slot="nav" id="secondary-nav-id"> <!-- aria-label if not given should it be replaced by aria-labelledby linking to logo? id is upgraded if not given -->
+    <rh-secondary-nav-container>
+      <a href="#" slot="logo" id="logo-id"> <!-- id is upgraded if not given -->
+        Red Hat Ansible Automation Platform <!-- <svg> or text can be added here -->
+      </a>
+      <ul slot="nav" aria-labelledby="logo-id"> <!-- is this ul labelledby the text or above what if its a svg? -->
+        <li>
+          <rh-secondary-nav-dropdown>
+            <a href="#" slot="link">Explore</a>
+            <rh-secondary-nav-menu slot="menu">
+              <rh-secondary-nav-menu-section slot="sections">
+                <h3 slot="header" id="flagship-products"> <!-- id will upgrade if not given -->
+                  <a href="#">Flagship Products</a>
+                </h3>
+                <ul slot="links" aria-labelledby="flagship-products"> <!-- aria-labelledby will upgrade if not given -->
+                  <li><a href="#">Awesome</a></li>
+                  <li><a href="#">So Good</a></li>
+                  <li><a href="#">Very Good</a></li>
+                  <li><a href="#">Even Better</a></li>
+                </ul>
+              </rh-secondary-nav-menu-section>
+              <rh-secondary-nav-menu-section slot="sections">
+                <h3 slot="header" id="flagship-products"> <!-- id will upgrade if not given -->
+                  <a href="#">Collaborations</a>
+                </h3>
+                <ul slot="links" aria-labelledby="flagship-products"> <!-- aria-labelledby will upgrade if not given -->
+                  <li><a href="#">Collab #1</a></li>
+                  <li><a href="#">Collab #2</a></li>
+                </ul>
+              </rh-secondary-nav-menu-section>
+            </rh-secondary-nav-menu>
+          </rh-secondary-nav-dropdown>
+        </li>
+        <li>
+          <rh-secondary-nav-dropdown>
+            <a href="#" slot="link">Use cases</a>
+            <rh-secondary-nav-menu slot="menu" type="fixed-width">
+              <rh-secondary-nav-menu-section slot="sections">
+                <ul slot="links">
+                  <li><a href="#">Infrastructure</a></li>
+                  <li><a href="#">Applications</a></li>
+                  <li><a href="#">Networks</a></li>
+                </ul>
+              </rh-secondary-nav-menu-section>
+              <rh-secondary-nav-menu-section slot="sections">
+                <ul slot="links">
+                  <li><a href="#">Containers</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Cloud</a></li>
+                </ul>
+              </rh-secondary-nav-menu-section>
+            </rh-secondary-nav-menu>
+          </rh-secondary-nav-dropdown>
+         </li>
+        <li><a href="#">Documentation</a></li>
+      </ul>
+      <div slot="cta">
+        <pfe-cta>
+          <a href="#">Get started</a>
+        </pfe-cta>
+      </div>
+    </rh-secondary-nav-container>
+  </nav>
+</rh-secondary-nav>
+
+
+<!-- this is here due to the wonky nature of vaadin-split-layout-->
+<div style="height: 500px">  </div>

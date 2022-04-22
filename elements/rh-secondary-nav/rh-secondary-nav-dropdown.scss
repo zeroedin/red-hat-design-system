@@ -1,0 +1,32 @@
+:host {
+  display: block;
+}
+
+::slotted([slot="link"]) {
+  position: relative;
+  gap: 0.85rem;
+}
+
+::slotted([slot="link"]):after {
+  content: "";
+  display: block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-right: 0.15rem solid var(--rh-secondary-nav-font-color);
+  border-bottom: 0.15rem solid var(--rh-secondary-nav-font-color);
+  transform: rotate(45deg) translate(-0.3rem, 0.15rem);
+}
+
+::slotted([slot="link"][aria-expanded="true"]) {
+  background: #fff;
+  border-top-color: var(--rh-secondary-nav-brand-color) !important;
+  color: var(--rh-secondary-nav-text-color) !important;
+}
+
+::slotted(a[aria-expanded="true"]):after {
+  transform: rotate(-135deg) translate(0.15rem, -0.3rem);
+}
+
+::slotted([slot="menu"]) {
+  position: absolute;
+}

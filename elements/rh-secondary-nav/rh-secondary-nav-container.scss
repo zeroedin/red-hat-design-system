@@ -1,0 +1,41 @@
+button {
+  grid-area: menu;
+  border: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: var(--rh-font-size, 1rem);
+  padding: 1rem;
+  border-top: 0.25rem solid transparent;
+  transition: border-top-color 250ms ease-out;
+}
+
+button:after {
+  content: "";
+  display: block;
+  margin-left: 1rem;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-right: 0.15rem solid var(--rh-secondary-nav-font-color);
+  border-bottom: 0.15rem solid var(--rh-secondary-nav-font-color);
+  transform: rotate(45deg) translate(-0.3rem, 0.15rem);
+}
+
+button:hover {
+  border-top-color: var(--rh-secondary-nav-link-color);
+}
+
+button:active {
+  border-top-color: var(--rh-secondary-nav-brand-color);
+}
+
+button:hover,
+button:active {
+  background: var(--rh-secondary-nav-subnav-background);
+}
+
+@media screen and (min-width: 992px) {
+  button {
+    display: none;
+  }
+}

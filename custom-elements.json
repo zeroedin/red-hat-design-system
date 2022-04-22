@@ -1,0 +1,517 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "docs/js/global.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RhdsComponentStatus",
+          "members": [
+            {
+              "kind": "method",
+              "name": "_render"
+            },
+            {
+              "kind": "method",
+              "name": "_fetchData"
+            },
+            {
+              "kind": "field",
+              "name": "spreadSheetUrl",
+              "type": {
+                "text": "string"
+              },
+              "default": "'https://sheets.googleapis.com/v4/spreadsheets/1OfyP6KZcijXMAX7DvN7KYxlUmp8pqH2WQqQ-ndSc4uc/values/Status?key=AIzaSyB2awA3GspCB7QGF751H06A9BZP6f8FhWM'"
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "error",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "_componentData",
+              "type": {
+                "text": "object"
+              },
+              "default": "{\n      'columns': [],\n      'components': [],\n    }"
+            },
+            {
+              "kind": "field",
+              "name": "_filteredComponentData",
+              "type": {
+                "text": "object"
+              },
+              "default": "{\n      'columns': [],\n      'components': [],\n    }"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "component"
+            }
+          ],
+          "superclass": {
+            "name": "HTMLElement"
+          },
+          "tagName": "rhds-component-status",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "rhds-component-status",
+          "declaration": {
+            "name": "RhdsComponentStatus",
+            "module": "docs/js/global.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "elements/rh-secondary-nav/rh-secondary-nav-container.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RhSecondaryNavContainer",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[styles]"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            },
+            {
+              "kind": "method",
+              "name": "_toggleMenu",
+              "privacy": "private"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RhSecondaryNavContainer",
+          "declaration": {
+            "name": "RhSecondaryNavContainer",
+            "module": "elements/rh-secondary-nav/rh-secondary-nav-container.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "elements/rh-secondary-nav/rh-secondary-nav-dropdown.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "SecondaryNavDropdownChangeEvent",
+          "superclass": {
+            "name": "ComposedEvent",
+            "package": "@patternfly/pfe-core"
+          }
+        },
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RhSecondaryNavDropdown",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[styles]"
+            },
+            {
+              "kind": "field",
+              "name": "_slots",
+              "privacy": "private",
+              "default": "new SlotController(this, { slots: ['link', 'menu'] })"
+            },
+            {
+              "kind": "field",
+              "name": "expanded",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            },
+            {
+              "kind": "method",
+              "name": "_expandedChanged",
+              "privacy": "protected",
+              "parameters": [
+                {
+                  "name": "oldVal",
+                  "optional": true,
+                  "type": {
+                    "text": "'false' | 'true'"
+                  }
+                },
+                {
+                  "name": "newVal",
+                  "optional": true,
+                  "type": {
+                    "text": "'false' | 'true'"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_clickHandler",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_open",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "_close",
+              "privacy": "private"
+            }
+          ],
+          "events": [
+            {
+              "name": "expanded",
+              "type": {
+                "text": "SecondaryNavDropdownChangeEvent"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SecondaryNavDropdownChangeEvent",
+          "declaration": {
+            "name": "SecondaryNavDropdownChangeEvent",
+            "module": "elements/rh-secondary-nav/rh-secondary-nav-dropdown.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RhSecondaryNavDropdown",
+          "declaration": {
+            "name": "RhSecondaryNavDropdown",
+            "module": "elements/rh-secondary-nav/rh-secondary-nav-dropdown.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "elements/rh-secondary-nav/rh-secondary-nav-menu-section.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RhSecondaryNavMenuSection",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "static": true
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RhSecondaryNavMenuSection",
+          "declaration": {
+            "name": "RhSecondaryNavMenuSection",
+            "module": "elements/rh-secondary-nav/rh-secondary-nav-menu-section.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "elements/rh-secondary-nav/rh-secondary-nav-menu.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RhSecondaryNavMenu",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "static": true
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "'fixed-width' | 'full-width'"
+              },
+              "default": "'full-width'"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RhSecondaryNavMenu",
+          "declaration": {
+            "name": "RhSecondaryNavMenu",
+            "module": "elements/rh-secondary-nav/rh-secondary-nav-menu.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "elements/rh-secondary-nav/rh-secondary-nav.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Secondary Nav",
+          "name": "RhSecondaryNav",
+          "slots": [
+            {
+              "description": "Place element content here",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "version",
+              "type": {
+                "text": "string"
+              },
+              "static": true,
+              "default": "'{{version}}'"
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[styles]"
+            },
+            {
+              "kind": "method",
+              "name": "isDropdown",
+              "static": true,
+              "return": {
+                "type": {
+                  "text": "element is RhSecondaryNavDropdown"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "element",
+                  "type": {
+                    "text": "Element|null"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "logger",
+              "privacy": "private",
+              "default": "new Logger(this)"
+            },
+            {
+              "kind": "method",
+              "name": "render"
+            },
+            {
+              "kind": "method",
+              "name": "expand",
+              "privacy": "public",
+              "parameters": [
+                {
+                  "name": "index",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "collapse",
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "_changeHandler",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "SecondaryNavDropdownChangeEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_getIndex",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "_el",
+                  "type": {
+                    "text": "Element|null"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_allDropdowns",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "RhSecondaryNavDropdown[]"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "_collapseDropdown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "dropdown",
+                  "type": {
+                    "text": "RhSecondaryNavDropdown"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_expandDropdown",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "dropdown",
+                  "type": {
+                    "text": "RhSecondaryNavDropdown"
+                  }
+                }
+              ]
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RhSecondaryNav",
+          "declaration": {
+            "name": "RhSecondaryNav",
+            "module": "elements/rh-secondary-nav/rh-secondary-nav.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "elements/rh-secondary-nav/demo/rh-secondary-nav.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "elements/rh-secondary-nav/test/rh-secondary-nav.e2e.spec.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "elements/rh-secondary-nav/test/rh-secondary-nav.spec.ts",
+      "declarations": [],
+      "exports": []
+    }
+  ]
+}
