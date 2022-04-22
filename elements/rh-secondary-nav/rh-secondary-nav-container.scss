@@ -25,8 +25,14 @@ button:hover {
   border-top-color: var(--rh-secondary-nav-link-color);
 }
 
+button[aria-expanded="true"],
 button:active {
+  background: var(--rh-secondary-nav-subnav-background);
   border-top-color: var(--rh-secondary-nav-brand-color);
+}
+
+button[aria-expanded="true"]:after {
+  transform: rotate(-135deg) translate(0.15rem, -0.3rem);
 }
 
 button:hover,

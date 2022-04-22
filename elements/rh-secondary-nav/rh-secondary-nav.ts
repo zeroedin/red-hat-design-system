@@ -32,6 +32,7 @@ export class RhSecondaryNav extends LitElement {
   connectedCallback() {
     super.connectedCallback()
     this.addEventListener('change', this._changeHandler as EventListener);
+    document.addEventListener('click', this._clickHandler as EventListener);
   }
 
   render() {
@@ -61,6 +62,14 @@ export class RhSecondaryNav extends LitElement {
     } 
   }
 
+  @bound
+  private _clickHandler(event: Event) {
+    // https://css-tricks.com/click-outside-detector/
+    if (this.contains(event.target as Node)) {
+      this.collapse() 
+    }
+  }
+
   private _getIndex(_el: Element|null) {
     if (RhSecondaryNav.isDropdown(_el)){
       const dropdowns = this._allDropdowns();
@@ -71,9 +80,6 @@ export class RhSecondaryNav extends LitElement {
   }
 
   private _allDropdowns(): RhSecondaryNavDropdown[] {
-    // Doesn't have direct children like accordion, have to querySelectorAll to find dropdowns
-    // Not sure that I really need to .filter() at this point as I am returning direct matches
-    // based on tag name with querySelectorAll
     return Array.from(this.querySelectorAll('rh-secondary-nav-dropdown')).filter(RhSecondaryNav.isDropdown);
   }
 

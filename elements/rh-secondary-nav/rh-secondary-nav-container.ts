@@ -3,6 +3,8 @@ import { customElement } from 'lit/decorators.js';
 
 import { pfelement, bound } from '@patternfly/pfe-core/decorators.js';
 
+import { getRandomId } from '@patternfly/pfe-core/functions/random.js';
+
 import { RhSecondaryNavDropdown } from './rh-secondary-nav-dropdown.js';
 
 import styles from './rh-secondary-nav-container.scss';
@@ -13,25 +15,22 @@ export class RhSecondaryNavContainer extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
+    this.id ||= getRandomId();
+
   }
 
   render() {
     return html`
       <slot name="logo"></slot>
-      <button @click="${this._toggleMenu}">Menu</button>
+      <button aria-expanded="false" aria-controls="${this.id}" @click="${this._toggleMenu}">Menu</button>
       <slot name="nav"></slot>
       <slot name="cta"></slot>
     `;
   }
 
-  private _toggleMenu() {
-    const navItems = this.querySelectorAll('[slot=nav], [slot=cta]');
-    navItems.forEach((item) => {
-      if (item?.classList.contains('expand')) {
-        item?.classList.remove('expand');
-      } else {
-        item?.classList.add('expand');
-      }
-    })
+  private _toggleMenu(event: MouseEvent) {
+    const button = event.target as HTMLButtonElement;
+    button?.getAttribute('aria-expanded') === 'false' ? button?.setAttribute('aria-expanded', 'true') : button?.setAttribute('aria-expanded', 'false');
+    this.hasAttribute('expanded') ? this.removeAttribute('expanded') : this.setAttribute('expanded','');
   }
 }

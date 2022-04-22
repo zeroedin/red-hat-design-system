@@ -1,0 +1,33 @@
+#sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+  padding: 1rem 0 2rem;
+}
+
+#cta {
+  border-top: 1px solid var(--rh-secondary-nav-divider-color);
+  padding: 2rem 0 3rem;
+  margin: 0 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  :host([visible]) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--rh-secondary-nav-min-height);
+    padding: 2rem;
+    background: var(--rh-secondary-nav-subnav-background);
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    z-index: 1001;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  #nav-menu {
+    max-width: 80vw;
+    margin: auto;
+  }
+}

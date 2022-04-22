@@ -4,6 +4,12 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "scripts/lightdom-css.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
       "path": "docs/js/global.js",
       "declarations": [
         {
@@ -108,7 +114,15 @@
             {
               "kind": "method",
               "name": "_toggleMenu",
-              "privacy": "private"
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
             }
           ],
           "superclass": {
@@ -265,7 +279,11 @@
             {
               "kind": "field",
               "name": "styles",
-              "static": true
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[styles]"
             },
             {
               "kind": "method",
@@ -302,7 +320,11 @@
             {
               "kind": "field",
               "name": "styles",
-              "static": true
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[styles]"
             },
             {
               "kind": "field",
@@ -313,8 +335,30 @@
               "default": "'full-width'"
             },
             {
+              "kind": "field",
+              "name": "_ctaNodes",
+              "type": {
+                "text": "NodeListOf<HTMLElement>"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_hasCta",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
               "kind": "method",
               "name": "render"
+            },
+            {
+              "kind": "method",
+              "name": "_onCtaSlotChange",
+              "privacy": "private"
             }
           ],
           "superclass": {
@@ -423,6 +467,19 @@
                   "name": "event",
                   "type": {
                     "text": "SecondaryNavDropdownChangeEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_clickHandler",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
                   }
                 }
               ]

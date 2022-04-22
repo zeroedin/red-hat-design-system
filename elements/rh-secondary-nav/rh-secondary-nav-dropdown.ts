@@ -37,11 +37,14 @@ export class RhSecondaryNavDropdown extends LitElement {
   connectedCallback(): void {
     super.connectedCallback();
 
+    this.id ||= getRandomId();
+
     const [link] = this._slots.getSlotted<HTMLElement>('link');
     link.setAttribute('role', 'button');
+    link.setAttribute('aria-expanded', 'false');
+    const [menu] = this._slots.getSlotted<HTMLElement>('menu');
+    link.setAttribute('aria-controls', menu.id);
     link.addEventListener('click', this._clickHandler);
-
-    this.id ||= getRandomId();
   }
 
   render() {

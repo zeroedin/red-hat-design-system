@@ -24,6 +24,7 @@
     "build": "run-s build:*",
     "build:analyze": "npm run analyze",
     "build:elements": "scripts/build.js",
+    "build:lightdom": "scripts/lightdom-css.js",
     "build:types": "tsc -b",
     "build:docs": "eleventy --config=.eleventy.cjs",
     "-----TEST-------": "Test packages",
