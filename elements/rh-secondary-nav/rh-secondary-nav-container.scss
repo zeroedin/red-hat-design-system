@@ -4,10 +4,12 @@ button {
   display: flex;
   height: 100%;
   align-items: center;
-  font-size: var(--rh-font-size, 1rem);
+  font-family: var(--pfe-theme--font-family);
+  font-size: 1rem;
   padding: 1rem;
   border-top: 0.25rem solid transparent;
   transition: border-top-color 250ms ease-out;
+
 }
 
 button:after {
