@@ -1,5 +1,5 @@
-import { html, LitElement, css } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { html, LitElement  } from 'lit';
+import { customElement, state } from 'lit/decorators.js';
 
 import { ComposedEvent } from '@patternfly/pfe-core';
 import { pfelement, bound, observed } from '@patternfly/pfe-core/decorators.js';
@@ -25,14 +25,7 @@ export class RhSecondaryNavDropdown extends LitElement {
   private _slots = new SlotController(this, { slots: ['link', 'menu'] });
 
   @observed
-  @property({ attribute: false }) expanded = false;
-
-
-  constructor() {
-    super();
-    // set default value to false so _expandedChange doesn't trigger on load
-    this.expanded = false;
-  }
+  @state() expanded = false;
 
   connectedCallback(): void {
     super.connectedCallback();
