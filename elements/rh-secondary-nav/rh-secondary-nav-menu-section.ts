@@ -14,6 +14,9 @@ export class RhSecondaryNavMenuSection extends LitElement {
       <section>
         <slot name="header"></slot>
         <slot name="links"></slot>
+        <div id="cta">
+          <slot name="cta"></slot>
+        </div>
       </section>
     `;
   }

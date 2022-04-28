@@ -1,5 +1,13 @@
 :host {
+  border-left:  3px solid transparent;
+  border-right: 1px solid transparent;
   display: block;
+}
+
+:host([expanded]){
+  border-left-color: var(--rh-secondary-nav-brand-color);
+  border-right-color: var(--rh-secondary-nav-divider-color);
+  box-shadow: 3px 3px 3px var(--rh-secondary-nav-divider-color);
 }
 
 ::slotted([slot="link"]) {
@@ -24,6 +32,15 @@
 
 @media screen and (min-width: 992px) {
 
+  :host {
+    border-left: none;
+    border-right: none;
+  }
+
+  :host([expanded]) {
+    box-shadow: none;
+  }
+
   ::slotted([slot="link"]){
     justify-content: flex-start;
   }
@@ -32,9 +49,5 @@
     background: #fff;
     border-top-color: var(--rh-secondary-nav-brand-color);
     color: var(--rh-secondary-nav-text-color);
-  }
-
-  ::slotted([slot="menu"]) {
-    position: absolute;
   }
 }

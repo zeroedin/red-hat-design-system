@@ -16,7 +16,6 @@ export class RhSecondaryNavContainer extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.id ||= getRandomId();
-
   }
 
   render() {
@@ -24,7 +23,7 @@ export class RhSecondaryNavContainer extends LitElement {
       <slot name="logo"></slot>
       <button aria-expanded="false" aria-controls="${this.id}" @click="${this._toggleMenu}">Menu</button>
       <slot name="nav"></slot>
-      <slot name="cta"></slot>
+      <div id="cta"><slot name="cta"></slot></div>
     `;
   }
 

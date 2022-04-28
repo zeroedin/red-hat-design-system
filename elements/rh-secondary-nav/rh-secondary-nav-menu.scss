@@ -1,15 +1,9 @@
 #sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16.75rem, 1fr));
   grid-template-rows: auto;
   grid-gap: 2rem;
   padding: 1rem 0 2rem;
-}
-
-#cta {
-  border-top: 1px solid var(--rh-secondary-nav-divider-color);
-  padding: 2rem 0 3rem;
-  margin: 0 1rem;
 }
 
 @media screen and (min-width: 992px) {
@@ -25,7 +19,7 @@
   }
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1440px) {
   #nav-menu {
     max-width: 80vw;
     margin: auto;

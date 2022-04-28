@@ -335,30 +335,8 @@
               "default": "'full-width'"
             },
             {
-              "kind": "field",
-              "name": "_ctaNodes",
-              "type": {
-                "text": "NodeListOf<HTMLElement>"
-              },
-              "privacy": "private"
-            },
-            {
-              "kind": "field",
-              "name": "_hasCta",
-              "type": {
-                "text": "boolean"
-              },
-              "privacy": "private",
-              "default": "false"
-            },
-            {
               "kind": "method",
               "name": "render"
-            },
-            {
-              "kind": "method",
-              "name": "_onCtaSlotChange",
-              "privacy": "private"
             }
           ],
           "superclass": {

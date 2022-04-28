@@ -9,7 +9,7 @@ button {
   padding: 1rem;
   border-top: 0.25rem solid transparent;
   transition: border-top-color 250ms ease-out;
-
+  margin-right: 1rem;
 }
 
 button:after {
@@ -42,8 +42,32 @@ button:active {
   background: var(--rh-secondary-nav-subnav-background);
 }
 
+:host([expanded]) #cta {
+  grid-column: 1 /  span 2;
+  background: var(--rh-secondary-nav-subnav-background);
+  padding: 0 0 1rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  button {
+    margin-right: 2rem;
+  }
+
+  :host([expanded]) #cta {
+    padding: 0 0 1rem 2rem;
+  }
+}
+
+
 @media screen and (min-width: 992px) {
   button {
     display: none;
   }
+
+  :host([expanded]) #cta {
+    background: transparent;
+    grid-column: unset;
+    padding: 0;
+  }
+
 }
