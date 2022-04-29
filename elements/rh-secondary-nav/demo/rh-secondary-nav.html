@@ -3,7 +3,7 @@
 
 <pfe-band size="small" color="darkest">
   <h2 slot="header">Note</h2>
-  <p>You must view this component using the fullscreen switch above. We dont have container queries yet, so this compnent's media query break points are set to in understanding the component will be full screen width.  The breakpoints will appear off if the component isn't 100% page width.</p>
+  <p>We dont have container queries yet, so this compnent's media query break points are set in understanding that the component will exist at full screen width.  The breakpoints will appear off if the component isn't 100% page width. You can use the fullscreen button above to test media query breakpoint.  However doing so will break position: sticky of the menu.</p>
 </pfe-band>
 
 <rh-secondary-nav>
@@ -136,7 +136,7 @@
         <li>
           <rh-secondary-nav-dropdown>
             <a href="#" slot="link">Use cases</a>
-            <rh-secondary-nav-menu slot="menu" type="fixed-width">
+            <rh-secondary-nav-menu slot="menu">
               <rh-secondary-nav-menu-section slot="sections">
                 <ul slot="links">
                   <li>
@@ -249,79 +249,31 @@
         <li>
           <rh-secondary-nav-dropdown>
             <a href="#" slot="link">Explore</a>
-            <rh-secondary-nav-menu slot="menu">
-              <rh-secondary-nav-menu-section slot="sections">
-                <h3 slot="header" id="ansible-platform">
-                  <a href="#">Why Red Hat Ansible Automation Platforms</a>
-                </h3>
-                <ul slot="links" aria-labelledby="ansible-platform"">
-                  <li>
-                    <a href="#">
-                      Integrations
-                      <pfe-icon icon="web-icon-new-window" color="info" size="sm"></pfe-icon>
-                    </a>
-                  </li>
-                  <li><a href="#">Custom success stories</a></li>
-                  <li>
-                    <a href="#">
-                      What is ansible
-                      <pfe-icon icon="web-icon-new-window" color="info" size="sm"></pfe-icon>
-                    </a>
-                  </li>
-                  <li><a href="#">Why choose Red Hat for automation?</a></li>
-                  <li><a href="#">Edge automation with Red Hat Ansible Automation Platform</a></li>
-                </ul>
-              </rh-secondary-nav-menu-section>
-              <rh-secondary-nav-menu-section slot="sections">
-                <h3 slot="header">
-                  <a href="#">Additional Features</a>
-                </h3>
-                <ul slot="links">
-                  <li><a href="#">Automation execution environments</a></li>
-                  <li><a href="#">Automation controller</a></li>
-                  <li>
-                    <a href="#">
-                      Automation mesh
-                      <pfe-icon icon="web-icon-new-window" color="info" size="sm"></pfe-icon>
-                    </a>
-                  </li>
-                  <li><a href="#">Ansible Content Collections</a></li>
-                  <li>
-                    <a href="#">
-                      Automation Hub
-                      <pfe-icon icon="web-icon-new-window" color="info" size="sm"></pfe-icon>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Red Hat Insights for Red Hat Ansible Automation Platform
-                      <pfe-icon icon="web-icon-new-window" color="info" size="sm"></pfe-icon>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Automation services catalog
-                      <pfe-icon icon="web-icon-new-window" color="info" size="sm"></pfe-icon>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Ansible content tools
-                      <pfe-icon icon="web-icon-new-window" color="info" size="sm"></pfe-icon>
-                    </a>
-                  </li>
-                </ul>
-              </rh-secondary-nav-menu-section>
-              <pfe-cta slot="cta">
-                <a href="#">All features and benefits</a>
-              </pfe-cta>
+            <rh-secondary-nav-menu slot="menu" type="fixed-width">
+              <ul slot="links">
+                <li>
+                  <a href="#">
+                    Integrations
+                    <pfe-icon icon="web-icon-new-window" color="info" size="sm"></pfe-icon>
+                  </a>
+                </li>
+                <li><a href="#">Custom success stories</a></li>
+                <li>
+                  <a href="#">
+                    What is ansible
+                    <pfe-icon icon="web-icon-new-window" color="info" size="sm"></pfe-icon>
+                  </a>
+                </li>
+                <li><a href="#">Why choose Red Hat for automation?</a></li>
+                <li><a href="#">Edge automation with Red Hat Ansible Automation Platform</a></li>
+              </ul>
             </rh-secondary-nav-menu>
           </rh-secondary-nav-dropdown>
         </li>
         <li>
           <rh-secondary-nav-dropdown>
             <a href="#" slot="link">Use cases</a>
-            <rh-secondary-nav-menu slot="menu" type="fixed-width">
+            <rh-secondary-nav-menu slot="menu">
 
               <pfe-card slot="sections">
                 <h2 slot="header">Hello world</h2>

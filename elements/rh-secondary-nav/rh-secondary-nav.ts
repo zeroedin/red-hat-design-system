@@ -89,6 +89,7 @@ export class RhSecondaryNav extends LitElement {
   }
 
   private _expandDropdown(dropdown: RhSecondaryNavDropdown) {
+    if (dropdown.expanded === true) return;
     dropdown.expanded = true;
   }
 }

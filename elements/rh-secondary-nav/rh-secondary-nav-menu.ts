@@ -10,7 +10,7 @@ import styles from './rh-secondary-nav-menu.scss';
 export class RhSecondaryNavMenu extends LitElement {
   static readonly styles = [styles];
 
-  @property({ reflect: true}) type: 'fixed-width' | 'full-width' = 'full-width';
+  @property({ reflect: true }) type: 'fixed-width' | 'full-width' = 'full-width';
 
   @queryAssignedNodes('cta', true)
   private _ctaNodes: NodeListOf<HTMLElement>;
@@ -25,7 +25,19 @@ export class RhSecondaryNavMenu extends LitElement {
   }
 
   render() {
-    return this._hasCta ? html`
+    if (this.type === 'full-width'){
+      if (this._hasCta) {
+        return this._ctaMenu()
+      } else {
+        return this._noCtaMenu()
+      }
+    } else {
+      return this._fixedMenu()
+    }
+  }
+
+  private _ctaMenu() {
+    return html`
       <div id="nav-menu">
         <div id="sections">
           <slot name="sections"></slot>
@@ -35,7 +47,10 @@ export class RhSecondaryNavMenu extends LitElement {
         </div>
       </div>
     ` 
-    : html`
+  }
+
+  private _noCtaMenu() {
+    return html`
       <div id="nav-menu">
         <div id="sections">
           <slot name="sections"></slot>
@@ -44,6 +59,15 @@ export class RhSecondaryNavMenu extends LitElement {
       </div>
     `;
   }
+
+  private _fixedMenu() {
+    return html`
+      <div id="nav-menu">
+        <slot name="links"></slot>
+      </div>
+    `
+  }
+
   private _onCtaSlotChange() {
     this._hasCta = this._ctaNodes.length > 0;
   }

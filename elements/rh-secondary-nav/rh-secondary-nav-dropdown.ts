@@ -59,6 +59,7 @@ export class RhSecondaryNavDropdown extends LitElement {
   }
 
   private _open() {
+    if (this.hasAttribute('expanded')) return;
     this.setAttribute('expanded', '')
     const link = this._slots.getSlotted('link').find(child => child instanceof HTMLAnchorElement)
     link?.setAttribute('aria-expanded', 'true')
@@ -67,6 +68,7 @@ export class RhSecondaryNavDropdown extends LitElement {
   }
 
   private _close() {
+    if (!this.hasAttribute('expanded')) return;
     this.removeAttribute('expanded')
     const link = this._slots.getSlotted('link').find(child => child instanceof HTMLAnchorElement)
     link?.setAttribute('aria-expanded', 'false')
