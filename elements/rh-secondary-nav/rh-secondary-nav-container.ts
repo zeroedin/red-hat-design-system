@@ -1,5 +1,5 @@
 import { html, LitElement, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, query } from 'lit/decorators.js';
 
 import { pfelement, bound } from '@patternfly/pfe-core/decorators.js';
 
@@ -13,9 +13,13 @@ import styles from './rh-secondary-nav-container.scss';
 export class RhSecondaryNavContainer extends LitElement {
   static readonly styles = [styles];
 
+  @query('button') _button: HTMLButtonElement;
+
   connectedCallback() {
     super.connectedCallback();
     this.id ||= getRandomId();
+
+    this.addEventListener('change', this._changeHandler as EventListener);
   }
 
   render() {
@@ -28,8 +32,33 @@ export class RhSecondaryNavContainer extends LitElement {
   }
 
   private _toggleMenu(event: MouseEvent) {
-    const button = event.target as HTMLButtonElement;
-    button?.getAttribute('aria-expanded') === 'false' ? button?.setAttribute('aria-expanded', 'true') : button?.setAttribute('aria-expanded', 'false');
-    this.hasAttribute('expanded') ? this.removeAttribute('expanded') : this.setAttribute('expanded','');
+    if (this._button?.getAttribute('aria-expanded') === 'false'){
+      this._open()
+    } else {
+      this._close()
+    }
   }
+
+  @bound 
+  private _changeHandler(event: SecondaryNavDropdownChangeEvent) {
+    // only respond to expanded, if it responds close events then it will close
+    // full menu when a single dropdown is closed in mobile view.
+    if (event.expanded) {
+      this._open()
+    }
+  }
+
+  private _open() {
+    if (this._button?.getAttribute('aria-expanded') === "true") return;
+    this._button?.setAttribute('aria-expanded', 'true')
+    this.setAttribute('expanded',''); 
+  }
+
+  private _close() {
+    if (this._button?.getAttribute('aria-expanded') === "false") return;
+    this._button?.setAttribute('aria-expanded', 'false');
+    this.removeAttribute('expanded');
+  }
+
+
 }

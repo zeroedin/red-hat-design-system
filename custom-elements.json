@@ -108,6 +108,13 @@
               "default": "[styles]"
             },
             {
+              "kind": "field",
+              "name": "_button",
+              "type": {
+                "text": "HTMLButtonElement"
+              }
+            },
+            {
               "kind": "method",
               "name": "render"
             },
@@ -123,6 +130,29 @@
                   }
                 }
               ]
+            },
+            {
+              "kind": "method",
+              "name": "_changeHandler",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "SecondaryNavDropdownChangeEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_open",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "_close",
+              "privacy": "private"
             }
           ],
           "superclass": {
@@ -335,8 +365,30 @@
               "default": "'full-width'"
             },
             {
+              "kind": "field",
+              "name": "_ctaNodes",
+              "type": {
+                "text": "NodeListOf<HTMLElement>"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "_hasCta",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
               "kind": "method",
               "name": "render"
+            },
+            {
+              "kind": "method",
+              "name": "_onCtaSlotChange",
+              "privacy": "private"
             }
           ],
           "superclass": {

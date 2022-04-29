@@ -6,6 +6,18 @@
   padding: 1rem 0 2rem;
 }
 
+#cta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.75rem, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+  padding: 2rem 0rem 3rem;
+}
+
+::slotted([slot="cta"]) {
+  padding: 0 1rem;
+}
+
 @media screen and (min-width: 992px) {
   :host([visible]) {
     position: absolute;
@@ -16,6 +28,10 @@
     background: var(--rh-secondary-nav-subnav-background);
     box-shadow: 0 2px 8px rgba(0,0,0,.2);
     z-index: 1001;
+  }
+
+  #cta {
+    border-top: 1px solid var(--rh-secondary-nav-divider-color);
   }
 }
 

@@ -1,4 +1,4 @@
-import { html, LitElement, css } from 'lit';
+import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
 import { pfelement } from '@patternfly/pfe-core/decorators.js';
@@ -14,9 +14,6 @@ export class RhSecondaryNavMenuSection extends LitElement {
       <section>
         <slot name="header"></slot>
         <slot name="links"></slot>
-        <div id="cta">
-          <slot name="cta"></slot>
-        </div>
       </section>
     `;
   }
