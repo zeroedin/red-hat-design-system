@@ -36,12 +36,13 @@
     top: var(--rh-secondary-nav-min-height);
     padding: 2rem;
     background: var(--rh-secondary-nav-subnav-background);
-    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    //box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    box-shadow: 0px 2px 4px #15151533;
   }
 
   :host([type="fixed-width"]) {
     position: absolute;
-    top: 74px;
+    top: var(--rh-secondary-nav-min-height);
     left: auto;
     right: auto;
     bottom: auto;

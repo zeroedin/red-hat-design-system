@@ -8,9 +8,9 @@ rh-secondary-nav {
   --rh-secondary-nav-brand-color: #e00;
   --rh-secondary-nav-subnav-background: #FFFFFF;
   --rh-secondary-nav-divider-color: #d2d2d2;
-  --rh-secondary-nav-min-height: 74px;
+  --rh-secondary-nav-min-height: 4.265rem;
   --rh-secondary-nav-logo-width: 11rem;
-  --rh-secondary-nav-logo-font-size: 16px;
+  --rh-secondary-nav-logo-font-size: 1rem;
 
   display: block;
   position: sticky;
@@ -27,7 +27,7 @@ rh-secondary-nav-container {
   display: grid;
   grid-template-areas: 'logo menu' 'nav nav' 'cta cta';
   grid-template-columns: 1fr max-content;
-  grid-template-rows: 74px max-content max-content;
+  grid-template-rows: var(--rh-secondary-nav-min-height) max-content max-content;
   column-gap: 1rem;
   row-gap: 0;
   height: 100%;
@@ -53,7 +53,7 @@ rh-secondary-nav-container > [slot="logo"] {
   max-width: var(--rh-secondary-nav-logo-width, 10rem);
   text-decoration: none;
   color: var(--rh-secondary-nav-font-color);
-  font-size: var(--rh-secondary-nav-logo-font-size, 16px);
+  font-size: var(--rh-secondary-nav-logo-font-size, 1rem);
   letter-spacing: 0.18px;
   line-height: var(--rh-line-height, 1.25rem);
   font-weight: 500;
@@ -108,7 +108,7 @@ rh-secondary-nav-dropdown > a {
   padding: 1rem;
   text-decoration: none;
   text-align: center;
-  border-top: 0.25rem solid transparent;
+  border-top: 3px solid transparent;
   transition: border-top-color 0ms ease-out;
 }
 
@@ -124,7 +124,7 @@ rh-secondary-nav-dropdown > a:hover {
 }
 
 rh-secondary-nav-container > [slot="nav"] {
-  margin: 0px;
+  margin: 0;
   padding: 0rem;
   list-style: none;
 }
@@ -212,11 +212,14 @@ rh-secondary-nav-menu-section > ul > li > a:hover {
     transition: border-top-color 250ms ease-out;
   }
 
-  rh-secondary-nav-container > [slot="nav"] > li > a:hover,
   rh-secondary-nav-container > [slot="nav"] > li > a:focus,
-  rh-secondary-nav-dropdown > a:hover,
   rh-secondary-nav-dropdown > a:focus {
     border-top-color: var(--rh-secondary-nav-link-color);
+  }
+
+  rh-secondary-nav-container > [slot="nav"] > li > a:hover,
+  rh-secondary-nav-dropdown > a:hover {
+    border-top-color: var(--rh-secondary-nav-brand-color);
   }
 
   rh-secondary-nav-container > [slot="nav"] > li > a:active,
