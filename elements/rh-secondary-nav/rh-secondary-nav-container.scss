@@ -46,6 +46,7 @@ button:active {
   grid-column: 1 /  span 2;
   background: var(--rh-secondary-nav-subnav-background);
   padding: 0 0 1rem 1rem;
+  box-shadow: var(--rh-secondary-nav-box-shadow);
 }
 
 @media screen and (min-width: 768px) {
@@ -58,7 +59,6 @@ button:active {
   }
 }
 
-
 @media screen and (min-width: 992px) {
   button {
     display: none;
@@ -68,6 +68,7 @@ button:active {
     background: transparent;
     grid-column: unset;
     padding: 0;
+    box-shadow: none;
   }
 
 }

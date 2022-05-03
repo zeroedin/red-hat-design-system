@@ -1,4 +1,4 @@
-import { html, LitElement  } from 'lit';
+import { html, LitElement } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 
 import { ComposedEvent } from '@patternfly/pfe-core';

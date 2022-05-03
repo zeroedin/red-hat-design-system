@@ -2,12 +2,14 @@ rh-secondary-nav {
   --rh-secondary-nav-background: #F0F0F0;
   --rh-secondary-nav-font-color: #151515;
   --rh-secondary-nav-top-level-link-color: #151515;
-  --rh-secondary-nav-top-level-link-hover-color: #4d4d4d;
+  --rh-secondary-nav-top-level-link-hover-color: #151515;
   --rh-secondary-nav-link-color: #0066CC;
   --rh-secondary-nav-link-hover-color: #004080;
+  --rh-secondary-nav-border-color: transparent;
   --rh-secondary-nav-brand-color: #e00;
   --rh-secondary-nav-subnav-background: #FFFFFF;
   --rh-secondary-nav-divider-color: #d2d2d2;
+  --rh-secondary-nav-box-shadow: 0px 2px 4px #d2d2d2;
   --rh-secondary-nav-min-height: 4.265rem;
   --rh-secondary-nav-logo-width: 11rem;
   --rh-secondary-nav-logo-font-size: 1rem;
@@ -17,7 +19,20 @@ rh-secondary-nav {
   top: 0;
   height: var(--rh-secondary-nav-min-height);
   background-color: var(--rh-secondary-nav-background);
+  box-shadow: var(--rh-secondary-nav-box-shadow);
+  border-bottom: 1px solid var(--rh-secondary-nav-border-color);
 }
+
+rh-secondary-nav[theme="dark"] {
+  --rh-secondary-nav-background: #3C3F42;
+  --rh-secondary-nav-font-color: #FFFFFF;
+  --rh-secondary-nav-top-level-link-color: #FFFFFF;
+  --rh-secondary-nav-top-level-link-hover-color: #151515;
+  --rh-secondary-nav-border-color: #6A6E73;
+  box-shadow: none;
+  border-bottom-color: var(--rh-secondary-nav-border-color);
+}
+
 
 rh-secondary-nav nav {
   height: 100%;
@@ -220,6 +235,8 @@ rh-secondary-nav-menu-section > ul > li > a:hover {
   rh-secondary-nav-container > [slot="nav"] > li > a:hover,
   rh-secondary-nav-dropdown > a:hover {
     border-top-color: var(--rh-secondary-nav-brand-color);
+    background: var(--rh-secondary-nav-subnav-background);
+    color: var(--rh-secondary-nav-top-level-link-hover-color);
   }
 
   rh-secondary-nav-container > [slot="nav"] > li > a:active,
@@ -227,6 +244,7 @@ rh-secondary-nav-menu-section > ul > li > a:hover {
   rh-secondary-nav-dropdown > a:active  {
     border-top-color: var(--rh-secondary-nav-brand-color);
     background: var(--rh-secondary-nav-subnav-background);
+    color: var(--rh-secondary-nav-top-level-link-hover-color);
   }
 
   rh-secondary-nav-container[expanded] > ul {
