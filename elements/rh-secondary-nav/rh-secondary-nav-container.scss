@@ -1,3 +1,27 @@
+:host([expanded]) ::slotted([slot="nav"]) {
+  display: flex !important;
+  list-style: none;
+  flex-direction: column;
+  height: fit-content;
+  padding: 2rem 1rem 1rem;
+  margin: 0;
+}
+
+:host([expanded]) #cta {
+  grid-area: cta;
+  display: inline-block;
+  padding: 1rem 1rem 2rem;
+}
+
+:host([expanded]) ::slotted([slot="cta"]) {
+  display: inline-block !important;
+}
+
+:host([expanded]) ::slotted([slot="nav"]),
+:host([expanded]) #cta {
+  background-color: var(--rh-snav-expanded-background-color);
+}
+
 button {
   grid-area: menu;
   border: none;
@@ -10,9 +34,15 @@ button {
   border-top: 0.25rem solid transparent;
   transition: border-top-color 250ms ease-out;
   margin-right: 1rem;
-  color: var(--rh-secondary-nav-top-level-link-color);
-  background-color: var(--rh-secondary-nav-background);
+  color: var(--rh-snav-button-color);
+  background-color: var(--rh-snav-background-color);
 }
+
+button:hover {
+  color: var(--rh-snav-button-hover-color);
+  border-top-color: var(--rh-snav-brand-color);
+}
+
 
 button:after {
   content: "";
@@ -20,67 +50,67 @@ button:after {
   margin-left: 1rem;
   width: 0.25rem;
   height: 0.25rem;
-  color: var(--rh-secondary-nav-top-level-expanded-link-color);
-  border-right: 0.15rem solid var(--rh-secondary-nav-top-level-link-color);
-  border-bottom: 0.15rem solid var(--rh-secondary-nav-top-level-link-color);
+  border-right: 0.15rem solid var(--rh-snav-button-color);
+  border-bottom: 0.15rem solid var(--rh-snav-button-color);
   transform: rotate(45deg) translate(-0.3rem, 0.15rem);
 }
 
-button:hover:after {
-  border-right: 0.15rem solid var(--rh-secondary-nav-top-level-expanded-link-color);
-  border-bottom: 0.15rem solid var(--rh-secondary-nav-top-level-expanded-link-color);
-}
-
-button:hover {
-  color: var(--rh-secondary-nav-top-level-expanded-link-color);
-  border-top-color: var(--rh-secondary-nav-brand-color);
-}
-
-
-button[aria-expanded="true"],
-button:active {
-  color: var(--rh-secondary-nav-top-level-expanded-link-color);
-  background: var(--rh-secondary-nav-subnav-background);
-  border-top-color: var(--rh-secondary-nav-brand-color);
-}
-
-button[aria-expanded="true"]:after {
-  transform: rotate(-135deg) translate(0.15rem, -0.3rem);
-  border-right: 0.15rem solid var(--rh-secondary-nav-top-level-expanded-link-color);
-  border-bottom: 0.15rem solid var(--rh-secondary-nav-top-level-expanded-link-color);
+button:focus {
+  border-top-color: var(--rh-snav-brand-color);
 }
 
 button:hover,
-button:active {
-  background: var(--rh-secondary-nav-subnav-background);
+button:active,
+button[aria-expanded="true"] {
+  color: var(--rh-snav-button-hover-color);
+  background: var(--rh-snav-expanded-background-color);
+  border-top-color: var(--rh-snav-brand-color);
 }
 
-:host([expanded]) #cta {
-  grid-column: 1 /  span 2;
-  background: var(--rh-secondary-nav-subnav-background);
-  padding: 0 0 1rem 1rem;
-  box-shadow: var(--rh-secondary-nav-box-shadow);
+button:hover:after {
+  border-right: 0.15rem solid var(--rh-snav-button-hover-color);
+  border-bottom: 0.15rem solid var(--rh-snav-button-hover-color);
+}
+
+button[aria-expanded="true"]:after {
+  border-right: 0.15rem solid var(--rh-snav-button-hover-color);
+  border-bottom: 0.15rem solid var(--rh-snav-button-hover-color);
+  transform: rotate(-135deg) translate(0.15rem, -0.3rem);
 }
 
 @media screen and (min-width: 768px) {
-  button {
-    margin-right: 2rem;
+  :host([expanded]) ::slotted([slot="nav"]) {
+    padding: 2rem 2rem 1rem;
   }
 
   :host([expanded]) #cta {
-    padding: 0 0 1rem 2rem;
+    padding: 1rem 2rem 2rem;
+  }
+
+  button {
+    margin-right: 2rem;
   }
 }
 
 @media screen and (min-width: 992px) {
-  button {
-    display: none;
-  }
 
   :host([expanded]) #cta {
     background: transparent;
     grid-column: unset;
     padding: 0;
     box-shadow: none;
+  }
+
+  :host([expanded]) ::slotted([slot="nav"]),
+  :host([expanded]) #cta {
+    background-color: var(--rh-snav-background-color);
+  }
+
+  :host([expanded]) ::slotted([slot="cta"]) {
+    display: flex !important;
+  }
+
+  button {
+    display: none;
   }
 }

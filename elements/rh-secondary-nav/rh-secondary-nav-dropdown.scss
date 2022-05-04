@@ -5,9 +5,9 @@
 }
 
 :host([expanded]){
-  border-left-color: var(--rh-secondary-nav-brand-color);
-  border-right-color: var(--rh-secondary-nav-divider-color);
-  box-shadow: var(--rh-secondary-nav-box-shadow);
+  border-left-color: var(--rh-snav-brand-color);
+  border-right-color: var(--rh-snav-divider-color);
+  box-shadow: var(--rh-snav-box-shadow);
 }
 
 ::slotted([slot="link"]) {
@@ -21,17 +21,15 @@
   display: block;
   width: 0.25rem;
   height: 0.25rem;
-  color: var(--rh-secondary-nav-top-level-link-color);
-  border-right: 0.15rem solid var(--rh-secondary-nav-top-level-link-color);
-  border-bottom: 0.15rem solid var(--rh-secondary-nav-top-level-link-color);
+  border-right: 0.15rem solid var(--rh-snav-chevron-color);
+  border-bottom: 0.15rem solid var(--rh-snav-chevron-color);
   transform: rotate(45deg) translate(-0.3rem, 0.15rem);
 }
 
-::slotted([slot="link"]:hover):after {
-  color: var(--rh-secondary-nav-top-level-link-hover-color);
-  border-right: 0.15rem solid var(--rh-secondary-nav-top-level-link-hover-color);
-  border-bottom: 0.15rem solid var(--rh-secondary-nav-top-level-link-hover-color);
+:host([expanded]) ::slotted([slot="link"]):after {
+  transform: rotate(-135deg) translate(0.15rem, -0.3rem);
 }
+
 
 @media screen and (min-width: 992px) {
   :host {

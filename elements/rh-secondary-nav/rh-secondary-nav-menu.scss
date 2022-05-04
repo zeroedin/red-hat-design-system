@@ -1,16 +1,24 @@
+:host(:not([visible])) {
+  display: none;
+}
+
+:host([visible]) {
+  background-color: var(--rh-snav-expanded-background-color);
+}
+
 #sections {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.75rem, 1fr));
   grid-template-rows: auto;
-  grid-gap: 2rem;
-  padding: 1rem 0 2rem;
+  grid-gap: var(--rh-snav-menu-sections-gap, 2rem);
+  padding: var(--rh-snav-menu-sections-padding, 1rem 0 2rem);
 }
 
 #cta {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.75rem, 1fr));
   grid-template-rows: auto;
-  grid-gap: 2rem;
+  grid-gap: var(--rh-snav-menu-sections-gap, 2rem);
   padding: 2rem 0rem 3rem;
 }
 
@@ -34,7 +42,6 @@
     right: 0;
     top: var(--rh-secondary-nav-min-height);
     padding: 2rem;
-    background: var(--rh-secondary-nav-subnav-background);
     box-shadow: var(--rh-secondary-nav-box-shadow);
   }
 
