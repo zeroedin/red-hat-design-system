@@ -41,11 +41,15 @@ export class RhSecondaryNavContainer extends LitElement {
 
   @bound 
   private _changeHandler(event: SecondaryNavDropdownChangeEvent) {
-    // only respond to expanded, if it responds close events then it will close
-    // full menu when a single dropdown is closed in mobile view.
     if (event.expanded) {
       this._open()
     } 
+    // only close from a event.expanded === false and the window is 
+    // greater thand or eq to 992 breakpoint, otherwise the mobile
+    // menu full close on each dropdown click
+    if (!event.expanded && window.innerWidth >= 992) {
+      this._close()
+    }
   }
 
   private _open() {
