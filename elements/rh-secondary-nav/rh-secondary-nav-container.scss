@@ -36,6 +36,7 @@ button {
   margin-right: 1rem;
   color: var(--rh-snav-button-color);
   background-color: var(--rh-snav-background-color);
+  border-bottom: 1px solid var(--rh-snav-border-color);
 }
 
 button:hover {
@@ -65,6 +66,7 @@ button[aria-expanded="true"] {
   color: var(--rh-snav-button-hover-color);
   background: var(--rh-snav-expanded-background-color);
   border-top-color: var(--rh-snav-brand-color);
+  border-bottom: none;
 }
 
 button:hover:after {

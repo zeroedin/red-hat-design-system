@@ -1,5 +1,6 @@
+
 rh-secondary-nav {
-  --rh-snav-min-height: 4.265rem;
+  --rh-snav-min-height: 4.625rem;
   --rh-snav-background-color: #F0F0F0;
   --rh-snav-font-color: #151515;
   --rh-snav-top-link-color: #151515;
@@ -17,6 +18,14 @@ rh-secondary-nav {
   --rh-snav-logo-max-width: 11rem;
   --rh-snav-logo-font-size: 1rem;
   --rh-snav-logo-line-height: 1.25rem;
+
+  --rh-snav-menu-sections-padding: 1rem 0 2rem;
+  --rh-snav-menu-sections-gap: 2rem;
+  --rh-snav-menu-sections-template-columns: repeat(auto-fit, minmax(16.75rem, 1fr));
+
+  --rh-snav-menu-cta-padding: 2rem 0rem 3rem;
+  --rh-snav-menu-cta-gap: 2rem;
+  --rh-snav-menu-cta-template-columns: repeat(auto-fit, minmax(16.75rem, 1fr));
 }
 
 rh-secondary-nav[variant="dark"] {
@@ -29,13 +38,19 @@ rh-secondary-nav[variant="dark"] {
 }
 
 rh-secondary-nav {
+  box-sizing: border-box;
   display: block;
   position: sticky;
   top: 0;
+  font-size: 1rem;
   height: var(--rh-snav-min-height);
   background-color: var(--rh-snav-background-color);
   border-bottom: 1px solid var(--rh-snav-border-color);
   box-shadow: var(--rh-snav-box-shadow);
+}
+
+rh-secondary-nav * {
+  box-sizing: border-box;
 }
 
 /* All rh-secondary-nav links */
@@ -45,7 +60,6 @@ rh-secondary-nav a {
 }
 
 rh-secondary-nav a:hover {
-  text-decoration: underline;
   color: var( --rh-snav-link-hover-color);
 }
 
@@ -97,7 +111,6 @@ rh-secondary-nav-container > [slot="cta"] {
 /* Top level links, styles are owned by lightdom elements */
 rh-secondary-nav-container > [slot="nav"] > li > a,
 rh-secondary-nav-dropdown > a {
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   height: max-content;
@@ -132,7 +145,20 @@ rh-secondary-nav-container[expanded] > [slot="nav"] > li > a {
   color: var(--rh-snav-top-link-color)
 }
 
+rh-secondary-nav-menu-section > [slot="header"] {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--rh-secondary-nav-font-color);
+}
+
+rh-secondary-nav-menu-section > [slot="header"] > a {
+  color: var(--rh-secondary-nav-font-color);
+}
+
 @media screen and (min-width: 992px) {
+  rh-secondary-nav {
+    --rh-snav-min-height: 4.875rem;
+  }
 
   rh-secondary-nav-container {
     grid-template-areas: 'logo nav cta';

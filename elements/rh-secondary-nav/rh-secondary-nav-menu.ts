@@ -15,8 +15,14 @@ export class RhSecondaryNavMenu extends LitElement {
   @queryAssignedNodes('cta', true)
   private _ctaNodes: NodeListOf<HTMLElement>;
 
+  @queryAssignedNodes('sections', true)
+  private _sectionsNodes: NodeListOf<HTMLElement>;
+
   @state()
   private _hasCta = false;
+
+  @state()
+  private _hasSections = false;
 
   connectedCallback() {
     super.connectedCallback();
@@ -26,38 +32,24 @@ export class RhSecondaryNavMenu extends LitElement {
 
   render() {
     if (this.type === 'full-width'){
-      if (this._hasCta) {
-        return this._ctaMenu()
-      } else {
-        return this._noCtaMenu()
-      }
+      return this._fullWidthMenu()
     } else {
       return this._fixedMenu()
     }
   }
 
-  private _ctaMenu() {
+  private _fullWidthMenu() {
     return html`
       <div id="nav-menu">
-        <div id="sections">
-          <slot name="sections"></slot>
+        <div id="sections" class="${this._sectionsClass()}" >
+          <slot name="sections" @slotchange=${this._onSectionsSlotChange}></slot>
         </div>
-        <div id="cta">
+        <slot name="open"></slot>
+        <div id="cta" class="${this._ctaClass()}">
           <slot name="cta" @slotchange=${this._onCtaSlotChange}></slot>
         </div>
       </div>
     ` 
-  }
-
-  private _noCtaMenu() {
-    return html`
-      <div id="nav-menu">
-        <div id="sections">
-          <slot name="sections"></slot>
-        </div>
-        <slot name="cta" @slotchange=${this._onCtaSlotChange}></slot>        
-      </div>
-    `;
   }
 
   private _fixedMenu() {
@@ -68,7 +60,19 @@ export class RhSecondaryNavMenu extends LitElement {
     `
   }
 
+  private _sectionsClass() {
+    return !this._hasSections ? 'hidden' : '';
+  }
+
+  private _ctaClass() {
+    return !this._hasCta ? 'hidden' : '';
+  }
+
   private _onCtaSlotChange() {
     this._hasCta = this._ctaNodes.length > 0;
+  }
+
+  private _onSectionsSlotChange() {
+    this._hasSections = this._sectionsNodes.length > 0;
   }
 }
