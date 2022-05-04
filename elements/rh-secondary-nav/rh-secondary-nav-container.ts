@@ -45,7 +45,7 @@ export class RhSecondaryNavContainer extends LitElement {
     // full menu when a single dropdown is closed in mobile view.
     if (event.expanded) {
       this._open()
-    }
+    } 
   }
 
   private _open() {
@@ -59,6 +59,4 @@ export class RhSecondaryNavContainer extends LitElement {
     this._button?.setAttribute('aria-expanded', 'false');
     this.removeAttribute('expanded');
   }
-
-
 }

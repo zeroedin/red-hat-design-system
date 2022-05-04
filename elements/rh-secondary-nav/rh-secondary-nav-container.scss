@@ -10,6 +10,8 @@ button {
   border-top: 0.25rem solid transparent;
   transition: border-top-color 250ms ease-out;
   margin-right: 1rem;
+  color: var(--rh-secondary-nav-top-level-link-color);
+  background-color: var(--rh-secondary-nav-background);
 }
 
 button:after {
@@ -18,23 +20,34 @@ button:after {
   margin-left: 1rem;
   width: 0.25rem;
   height: 0.25rem;
-  border-right: 0.15rem solid var(--rh-secondary-nav-font-color);
-  border-bottom: 0.15rem solid var(--rh-secondary-nav-font-color);
+  color: var(--rh-secondary-nav-top-level-expanded-link-color);
+  border-right: 0.15rem solid var(--rh-secondary-nav-top-level-link-color);
+  border-bottom: 0.15rem solid var(--rh-secondary-nav-top-level-link-color);
   transform: rotate(45deg) translate(-0.3rem, 0.15rem);
 }
 
-button:hover {
-  border-top-color: var(--rh-secondary-nav-link-color);
+button:hover:after {
+  border-right: 0.15rem solid var(--rh-secondary-nav-top-level-expanded-link-color);
+  border-bottom: 0.15rem solid var(--rh-secondary-nav-top-level-expanded-link-color);
 }
+
+button:hover {
+  color: var(--rh-secondary-nav-top-level-expanded-link-color);
+  border-top-color: var(--rh-secondary-nav-brand-color);
+}
+
 
 button[aria-expanded="true"],
 button:active {
+  color: var(--rh-secondary-nav-top-level-expanded-link-color);
   background: var(--rh-secondary-nav-subnav-background);
   border-top-color: var(--rh-secondary-nav-brand-color);
 }
 
 button[aria-expanded="true"]:after {
   transform: rotate(-135deg) translate(0.15rem, -0.3rem);
+  border-right: 0.15rem solid var(--rh-secondary-nav-top-level-expanded-link-color);
+  border-bottom: 0.15rem solid var(--rh-secondary-nav-top-level-expanded-link-color);
 }
 
 button:hover,
@@ -70,5 +83,4 @@ button:active {
     padding: 0;
     box-shadow: none;
   }
-
 }
