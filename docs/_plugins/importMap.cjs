@@ -43,8 +43,11 @@ module.exports = function(eleventyConfig, {
         },
       });
 
-      await generator.install(localPackages);
+      await generator.install(localPackages);     
       performance.mark('importMap-afterLocalPackages');
+
+      await generator.install('element-internals-polyfill');
+
 
       // RHDS imports
       // TODO: make rhds a 'package' like the other localPackages
