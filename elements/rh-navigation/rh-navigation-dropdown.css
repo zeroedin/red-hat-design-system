@@ -1,0 +1,92 @@
+:host {
+  display: block;
+}
+
+#container {
+  border-inline-start: 3px solid transparent;
+  border-inline-end: 1px solid transparent;
+  display: block;
+  height: 100%;
+}
+
+/*
+ * Move expanded back to an attribute if we decide
+ * that we are going to abstract this component
+ */
+#container.expanded {
+  border-inline-start-color: var(--rh-color-text-brand-on-dark, #ff442b);
+  border-inline-end-color: var(--rh-color-border-subtle-on-dark, #707070);
+  box-shadow: var(--rh-box-shadow-sm, 0 2px 4px 0 rgba(21, 21, 21, 0.2));
+}
+
+::slotted([slot="link"]) {
+  justify-content: space-between;
+  position: relative;
+  gap: calc(var(--rh-font-size-body-text-md, 1rem) / 2);
+  background: var(--rh-color-surface-lightest, #ffffff) !important;
+  color: var(--rh-color-text-primary-on-light, #151515) !important;
+}
+
+::slotted([slot="link"]):after {
+  box-sizing: content-box !important;
+  content: "";
+  display: block;
+  width: var(--_chevron-size);
+  height: var(--_chevron-size);
+  border-inline-end: var(--_chevron-thickness) solid var(--_chevron-color);
+  border-block-end: var(--_chevron-thickness) solid var(--_chevron-color);
+  transform: var(--_chevron-transform-collapsed);
+}
+
+#container.expanded ::slotted([slot="link"]):after {
+  transform: var(--_chevron-transform-expanded);
+}
+
+@media screen and (min-width: 1200px) {
+  #container {
+    border-inline-start: none;
+    border-inline-end: none;
+  }
+
+  /*
+ * Move expanded back to an attribute if we decide
+ * that we are going to abstract this component
+ */
+  #container.expanded {
+    box-shadow: none;
+  }
+
+  ::slotted([slot="link"]) {
+    background: var(--rh-color-surface-darkest, #151515) !important;
+    color: var(--rh-color-text-primary-on-dark, #ffffff) !important;
+  }
+
+  ::slotted([slot="link"]):after {
+    width: 0;
+    height: 0;
+    position: var(--_chevron-position, absolute);
+    bottom: var(--rh-space-sm, 6px);
+    left: calc(50% - var(--_chevron-size));
+    border-block-start: var(--_chevron-size) solid var(--_chevron-color);
+    border-inline: var(--_chevron-size) solid transparent;
+    border-block-end: var(--_chevron-size) solid transparent;
+    transform: none;
+  }
+
+  #container.expanded ::slotted([slot="link"]):after {
+    transform: none;
+  }
+
+
+  ::slotted([slot="link"][aria-expanded="false"]:hover) {
+    --_chevron-color: var(--rh-color-gray-30, #a3a3a3);
+  }
+
+  ::slotted([slot="link"][aria-expanded="true"]) {
+    border-block-start-color: var(--rh-color-text-brand-on-light, #ee0000);
+    background: var(--rh-color-surface-lightest, #ffffff) !important;
+    color: var(--rh-color-text-primary-on-light, #151515) !important;
+    
+    --_chevron-color: var(--rh-color-text-primary-on-light, #151515);
+  }
+}

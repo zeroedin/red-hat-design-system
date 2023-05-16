@@ -1,0 +1,236 @@
+rh-navigation {
+  --_max-height: max-content;
+  --_min-height: 74px;
+  --_nav-link-color: var(--rh-color-text-primary-on-dark, #ffffff);
+  --_logo-link-color: var(--rh-color-text-primary-on-dark, #ffffff);
+  --_nav-chevron-color: var(--rh-color-text-primary-on-dark, #ffffff);
+
+  display: block;
+  position: var(--rh-navigation-position, initial);
+  top: 0;
+  background-color: var(--rh-color-surface-darkest, #151515);
+  height: var(--_max-height);
+  min-height: var(--_min-height);
+  font-family: var(--rh-font-family-body-text, RedHatText, "Red Hat Text", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif);
+}
+
+rh-navigation:not(:defined) {
+  display: grid;
+  position: relative;
+  gap: 0 var(--rh-space-2xl, 32px);
+  grid-template-rows: minmax(var(--_min-height), var(--_max-height)) max-content max-content;
+  grid-template-columns: max-content max-content max-content;
+  grid-template-areas:
+    "logo menu secondary-links"
+    "nav nav nav";
+}
+
+rh-navigation * {
+  box-sizing: border-box;
+}
+
+rh-navigation-menu a {
+  text-decoration: none;
+  color: var(--rh-color-interactive-blue-darker, #0066cc);
+}
+
+rh-navigation-menu a:hover {
+  color: var(--rh-color-interactive-blue-darkest, #004080) !important;
+  text-decoration: none !important;
+}
+
+rh-navigation > [slot="logo"] {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: var(--_logo-link-color);
+  max-width: var(--rh-navigation-logo-max-width, 136px);
+  text-decoration: none;
+  font-size: var(--rh-font-size-body-text-md, 1rem);
+  letter-spacing: 0.01125em;
+  line-height: var(--rh-line-height-body-text, 1.5);
+  margin-inline-start: var(--rh-space-lg, 16px);
+  font-family: var(--rh-font-family-heading, RedHatDisplay, "Red Hat Display", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif);
+  font-weight: var(--rh-font-weight-heading-medium, 500);
+  padding-block: var(--rh-space-md, 8px);
+}
+
+rh-navigation > [slot="logo"]:hover {
+  text-decoration: none;
+  color: var(--_nav-link-color);
+}
+
+rh-navigation > [slot="nav"] {
+  grid-area: nav;
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  background-color: var(--rh-color-surface-lightest, #ffffff);
+  margin: 0;
+  padding: var(--rh-space-2xl, 32px) var(--rh-space-lg, 16px);
+}
+
+rh-navigation > [slot="secondary-links"] {
+  grid-area: secondary-links;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0 var(--rh-space-lg, 16px) 0 0;
+  padding: 0;
+  gap: var(--rh-space-lg, 16px);
+  height: 100%;
+}
+
+/* If the component isn't defined hide any sub menus */
+rh-navigation-menu:not(:defined) {
+  display: none;
+}
+
+/* Top level links, styles are owned by lightdom elements */
+rh-navigation > [slot="nav"] > li > a,
+rh-navigation > [slot="secondary-links"] > li > a,
+rh-navigation-dropdown > a {
+  display: flex;
+  align-items: center;
+  height: max-content;
+  color: var(--_nav-link-color) !important;
+  font-size: var(--rh-font-size-body-text-md, 1rem);
+  font-weight: 500;
+  padding: var(--rh-space-lg, 16px) var(--rh-space-xl, 24px);
+  text-decoration: none !important;
+  text-align: center;
+  border-block-start: 3px solid transparent;
+}
+
+rh-navigation-menu-section > [slot="header"] > a {
+  color: var(--rh-color-text-primary-on-light, #151515);
+}
+
+rh-navigation > [slot="secondary-links"] > li > a {
+  font-size: var(--rh-font-size-body-text-sm, 0.875rem);
+  padding-inline: var(--rh-space-xs, 4px);
+  flex-direction: column;
+  gap: var(--rh-space-xs, 4px);
+}
+
+rh-navigation > [slot="nav"] > li > a:hover,
+rh-navigation > [slot="secondary-links"] > li > a:hover,
+rh-navigation-dropdown > a:hover {
+  text-decoration: none !important;
+  color: var(--_nav-link-color) !important;
+}
+
+rh-navigation > [slot="nav"] > li > a:focus-within,
+rh-navigation > [slot="secondary-links"] > li > a:focus-within,
+rh-navigation-dropdown > a:focus-within {
+  outline: 1px dashed currentcolor;
+  outline-offset: -1px;
+}
+
+rh-navigation > [slot="nav"] > li {
+  border-block-start: 1px solid var(--rh-color-border-subtle-on-light, #c7c7c7);
+}
+
+rh-navigation > [slot="nav"] > li:last-of-type {
+  border-block-end: 1px solid  var(--rh-color-border-subtle-on-light, #c7c7c7);
+}
+
+rh-navigation > [slot="nav"] a[aria-expanded="false"],
+rh-navigation > [slot="nav"] > [slot="nav"] > li > a {
+  color: var(--_nav-link-color);
+}
+
+rh-navigation-menu-section > [slot="header"] {
+  font-size: var(--rh-font-size-body-text-md, 1rem);
+  font-weight: 500;
+  color: var(--rh-color-text-primary-on-light, #151515);
+  margin: 0 0 var(--rh-space-lg, 16px);
+}
+
+@media screen and (min-width: 768px) {
+  rh-navigation > [slot="logo"] {
+    margin-inline-start: var(--rh-space-2xl, 32px);
+  }
+
+  rh-navigation > [slot="secondary-links"] {
+    margin-inline-end: var(--rh-space-2xl, 32px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  rh-navigation:not(:defined) {
+    display: grid;
+    grid-template-areas: "logo nav secondary-links";
+    grid-template-rows: 4.625rem max-content max-content;
+    grid-template-columns: max-content 1fr max-content;
+  }
+
+  rh-navigation-dropdown > a[aria-expanded="true"] {
+    --_nav-link-color: var(--rh-color-text-primary-on-light, #151515);
+    --_nav-chevron-color: var(--rh-color-text-primary-on-light, #151515);
+    
+    border-block-start-color: var(--rh-color-text-brand-on-light, #ee0000);
+    color: var(--_nav-link-color);
+  }
+
+  rh-navigation > [slot="logo"] {
+    font-size: var(--rh-font-size-body-text-lg, 1.125rem);
+    margin-inline-start: 2rem;
+  }
+
+  rh-navigation > [slot="mobile-menu"] {
+    display: none;
+  }
+
+  rh-navigation > [slot="nav"] {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  rh-navigation > [slot="nav"] > li {
+    border-block-start-width: 0;
+  }
+
+  rh-navigation > [slot="nav"] > li:last-of-type {
+    border-bottom-width: 0;
+  }
+
+  rh-navigation > ul > li,
+  rh-navigation-dropdown {
+    height: 100%;
+  }
+
+  rh-navigation > [slot="nav"] > li > a,
+  rh-navigation-dropdown > a {
+    height: 100%;
+    font-weight: 400;
+    padding: 0 var(--rh-space-lg, 16px);
+  }
+
+  rh-navigation > [slot="nav"] > li > a:focus,
+  rh-navigation > [slot="nav"] > li > a:hover,
+  rh-navigation-dropdown > a:focus,
+  rh-navigation-dropdown > a:hover {
+    border-block-start-color: var(--rh-color-text-brand-on-dark, #ff442b);
+  }
+
+  @media screen and (min-width: 1440px) {
+    rh-navigation:not(:defined) > [slot="logo"],
+    rh-navigation > [slot="logo"] {
+      margin-inline-start: var(--rh-space-4xl, 64px);
+    }
+    
+    rh-navigation > [slot="secondary-links"] {
+      margin-inline-end: var(--rh-space-4xl, 64px);
+    }
+  }
+}
